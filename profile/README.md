@@ -58,7 +58,7 @@ Quorum approves — payment releases automatically
 ## Core Features
 
 ### ⚡ ZK Proof Milestone Submission
-Builders generate a cryptographic web proof via vlayer and TLSNotary confirming their GitHub PR exists, is merged, and is authored by their wallet-linked account. The smart contract verifies the proof. No human reads anything.
+Builders generate a cryptographic web proof via Noir ZK Coprocessor confirming their GitHub PR exists, is merged, and is authored by their wallet-linked account. The smart contract verifies the proof. No human reads anything.
 
 ### 🔐 ZK Identity Binding
 One-time permanent proof linking a wallet address to a verified GitHub account with real contribution history. Sybil attacks on grant programs are dead.
@@ -82,7 +82,7 @@ A permanent, public, tamper-proof score derived from the builder's full onchain 
 | Layer | Technology |
 |---|---|
 | Blockchain | Arbitrum One |
-| ZK Web Proofs | vlayer + TLSNotary MPC-TLS |
+| ZK Web Proofs | Noir ZK Coprocessor|
 | Attestations | Ethereum Attestation Service (EAS) |
 | Streaming Payments | Superfluid Protocol |
 | ZK Computation | SP1 zkVM (Succinct) |
@@ -100,8 +100,6 @@ A permanent, public, tamper-proof score derived from the builder's full onchain 
 |---|---|
 | `GrantEscrow.sol` | Core escrow logic — milestone management, voting, payment release, slashing |
 | `GrantIdentityRegistry.sol` | ZK identity bindings — wallet to GitHub handle |
-| `ReputationRegistry.sol` | Onchain reputation scoring derived from EAS attestations |
-| `WebProofVerifier.sol` | vlayer ZK proof verification — called inside GrantEscrow |
 
 All contracts deployed on Arbitrum One. All verified on Arbiscan. No upgrade proxies. No hidden admin functions. What you see is what runs.
 
@@ -244,13 +242,4 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## License
-
-MIT — build on it, fork it, deploy it.
-
----
-
 *Built on Arbitrum One. Powered by Noir ZK Coprocessor, EAS, and Superfluid.*
-```
-
-
