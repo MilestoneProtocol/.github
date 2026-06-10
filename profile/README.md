@@ -7,9 +7,9 @@
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 ![Status](https://img.shields.io/badge/status-live-brightgreen?style=flat-square)
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=flat-square&logo=vercel)](https://grant-os-frontend-ruby.vercel.app)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=flat-square&logo=vercel)](https://www.grantos.xyz/)
 
-🚀 **Live Demo:** [grant-os-frontend-ruby.vercel.app](https://grant-os-frontend-ruby.vercel.app)
+🚀 **Live Demo:** https://www.grantos.xyz/
 
 
 ---
@@ -67,10 +67,10 @@ One-time permanent proof linking a wallet address to a verified GitHub account w
 Committees cannot slash without first submitting an onchain warning EAS attestation. Builders have cryptographic due-process rights enforceable at the contract level. No warning onchain means no slash is possible.
 
 ### 💧 Streaming Milestone Payments
-Approved milestones stream USDC per second via Superfluid. The stream is cancellable and slashable at any point. Builders earn exactly what they earned — to the millisecond.
+Approved milestones stream USDC per second via Sablier. The stream is cancellable and slashable at any point. Builders earn exactly what they earned — to the millisecond.
 
 ### 🤖 AI Milestone Verifier
-GPT-4o reads the evidence URL and writes a plain-English analysis into the EAS attestation. Advisory only. The ZK proof is the enforcer. The AI is the assistant.
+Gemini reads the evidence URL and writes a plain-English analysis into the EAS attestation. Advisory only. The ZK proof is the enforcer. The AI is the assistant.
 
 ### 🏆 Builder Reputation Score
 A permanent, public, tamper-proof score derived from the builder's full onchain attestation history. No admin controls it. No committee member can modify it. It is what the blockchain says they did.
@@ -84,7 +84,7 @@ A permanent, public, tamper-proof score derived from the builder's full onchain 
 | Blockchain | Arbitrum One |
 | ZK Web Proofs | Noir ZK Coprocessor|
 | Attestations | Ethereum Attestation Service (EAS) |
-| Streaming Payments | Superfluid Protocol |
+| Streaming Payments | Sablier |
 | ZK Computation | SP1 zkVM (Succinct) |
 | Frontend | Next.js 15 App Router |
 | Wallet | RainbowKit + Wagmi + Viem |
@@ -189,8 +189,8 @@ Score clamped 0–100. Letter grades: A (90–100), B (75–89), C (60–74), D 
 ### Installation
 
 ```bash
-git clone https://github.com/your-org/grantos-v3
-cd grantos-v3
+git clone https://github.com/your-org/grantos
+cd grantos
 npm install
 ```
 
@@ -200,17 +200,6 @@ npm install
 cp .env.example .env.local
 ```
 
-```env
-NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=
-GITHUB_CLIENT_ID=
-GITHUB_CLIENT_SECRET=
-OPENAI_API_KEY=
-NEXT_PUBLIC_IDENTITY_REGISTRY_ADDRESS=
-NEXT_PUBLIC_GRANT_ESCROW_ADDRESS=
-NEXT_PUBLIC_REPUTATION_REGISTRY_ADDRESS=
-NEXT_PUBLIC_WEB_PROOF_VERIFIER_ADDRESS=
-TREASURY_ALERT_THRESHOLD=
-```
 
 ### Run Locally
 
@@ -224,22 +213,22 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## How It Differs From Every Other Grant Protocol
 
-| Feature | Traditional DAO Grants | GrantOS v3 |
+| Feature | Traditional DAO Grants | GrantOS|
 |---|---|---|
 | Evidence verification | Committee reads a link | Smart contract reads a ZK proof |
 | Identity verification | Self-reported | Cryptographically bound onchain |
 | Slashing due process | Social pressure | Contract-enforced 24hr warning |
-| Payments | Lump sum on trust | Streaming per second via Superfluid |
+| Payments | Lump sum on trust | Streaming per second via Sablier |
 | Reputation | Forum history | Tamper-proof onchain attestation score |
 | Sybil resistance | None | ZK identity binding — one wallet, one GitHub |
-| AI assistance | None | GPT-4o analysis stored in EAS attestation |
+| AI assistance | None | Gemini analysis stored in EAS attestation |
 
 ---
 
 ## The Demo in One Sentence
 
-> *"This builder did not submit a GitHub link. They submitted a cryptographic proof. The smart contract just read GitHub — not a human, not a committee member, not an AI. A ZK proof, verified onchain, in the same transaction. That is new. That is GrantOS v3."*
+> *"This builder did not submit a GitHub link. They submitted a cryptographic proof. The smart contract just read GitHub — not a human, not a committee member, not an AI. A ZK proof, verified onchain, in the same transaction. That is new. That is GrantOS."*
 
 ---
 
-*Built on Arbitrum One. Powered by Noir ZK Coprocessor, EAS, and Superfluid.*
+*Built on Arbitrum One. Powered by Noir ZK Coprocessor, EAS, and Sablier.*
